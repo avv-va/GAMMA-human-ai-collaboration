@@ -128,16 +128,15 @@ def main(args):
         os.makedirs(str(run_dir))
 
     # wandb
+    all_args.use_wandb = True
     if all_args.use_wandb:
+
         run = wandb.init(config=all_args,
-                         project=all_args.env_name,
-                         entity=all_args.wandb_name,
-                         notes=socket.gethostname(),
+                         project='gamma',
                          name=str(all_args.algorithm_name) + "_" +
                          str(all_args.experiment_name) +
-                         "_seed" + str(all_args.seed),
-                         group=all_args.layout_name,
-                         dir=str(run_dir),
+                         "_seed" + str(all_args.seed) + "_" + 
+                         all_args.layout_name,
                          job_type="training",
                          reinit=True,
                          tags=all_args.wandb_tags)

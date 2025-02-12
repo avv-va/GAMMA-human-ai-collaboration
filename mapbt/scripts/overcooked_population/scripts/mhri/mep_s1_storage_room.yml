@@ -1,0 +1,20 @@
+mep_adaptive:
+    policy_config_path: config/storage_room/rnn_policy_config.pkl
+    featurize_type: ppo
+    train: False
+mep1:
+    policy_config_path: config/storage_room/mlp_policy_config.pkl
+    featurize_type: ppo
+    train: True
+mep2:
+    policy_config_path: config/storage_room/mlp_policy_config.pkl
+    featurize_type: ppo
+    train: True
+mep3:
+    policy_config_path: config/storage_room/mlp_policy_config.pkl
+    featurize_type: ppo
+    train: True
+mep4:
+    policy_config_path: config/storage_room/mlp_policy_config.pkl
+    featurize_type: ppo
+    train: True
